@@ -10,7 +10,6 @@ input {
 
 button {
         cursor: pointer;
-        transform: scale(.95);
 }
 
 header {
@@ -184,6 +183,10 @@ input{
         margin: 2rem 0 2rem 0;
 }
 
+#mensagem-erro {
+        text-align: center;
+}
+
 #comprovante {
         color: rgba(0, 0, 0, 0.5);
         text-align: center;
@@ -201,11 +204,14 @@ input{
 footer {
         position: fixed;
         bottom: 0;
+        padding: 1.2rem;
         background-color: #fbfbfb;
         border-radius: 1rem 1rem 0 0;
         box-shadow: 0px -4px 6px -1px rgba(0, 0, 0, 0.1);
         text-align: center;
         z-index: 100;
+        width: 100%;
+        box-sizing: border-box;
 }
 
 footer button {
@@ -214,9 +220,8 @@ footer button {
         padding: .7rem;
         font-size: 1rem;
         font-weight: 600;
-        width: 90vw;
+        width: 100%;
         border-radius: 0.4rem;
-        margin: 1rem 5vw 1rem 5vw;
         color: white;
 }
 
@@ -241,11 +246,6 @@ footer button:active {
 
         footer {
                 width: 500px;
-        }
-
-        footer button {
-                width: 90%;
-                margin: 1rem 5% 1rem 5%;
         }
 
         #gerar {
