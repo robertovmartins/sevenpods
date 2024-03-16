@@ -118,13 +118,15 @@ function renderizarProdutos(produtos) {
     total += produto.price * produto.quantidade;
   });
 
-  var totalText = document.createElement("h3");
-  totalText.textContent = "Total";
-  totalElement.appendChild(totalText);
-
-  var totalValue = document.createElement("h4");
-  totalValue.textContent = "R$ " + total.toFixed(2);
-  totalElement.appendChild(totalValue);
+  var totalDiv = document.createElement("div");
+totalDiv.setAttribute("id", "total-div"); 
+var totalText = document.createElement("h3");
+totalText.textContent = "Total";
+totalDiv.appendChild(totalText);
+var totalValue = document.createElement("h4");
+totalValue.textContent = "R$ " + total.toFixed(2);
+totalDiv.appendChild(totalValue);
+totalElement.appendChild(totalDiv);
 
   var finalizarCompraButton = document.createElement("button");
   finalizarCompraButton.textContent = "Finalizar Pedido";
@@ -306,5 +308,3 @@ function finalizarCompra() {
 function goToHome() {
   window.location.href = "index.html";
 }
-
-
