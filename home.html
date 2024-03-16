@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Catálogo Digital da SevenPods para venda com direcionamento para o WhatsApp">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="./img/logo.svg">
+    <title>Catálogo Digital | SevenPods</title>
+    <style>
+        .cart-counter {
+            background-color: #ff0000;
+            color: #ffffff;
+            border-radius: 100%;
+            width: 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: -50px;
+            left: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="cart">
+                    <button onclick="goToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <div class="cart-counter">
+                        <span id="cart-counter"></span>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="logo">
+                <img src="img/logo.svg" alt="Logo da SevenPods">
+            </div>
+
+            <div class="search">
+                <input type="search" id="site-search" name="q" placeholder="Pesquise aqui...">
+                <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </header>
+        <main role="main">
+            <div class="products">
+                <div class="marca">
+                    <div class="grid">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="https://kit.fontawesome.com/a33a8d6d19.js" crossorigin="anonymous"></script>
+    <script>
+        function goToCart() {
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+
+</html>

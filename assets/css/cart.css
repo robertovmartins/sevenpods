@@ -1,0 +1,220 @@
+body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+}
+
+button {
+        cursor: pointer;
+        transform: scale(.95);
+}
+
+html {
+        background-color: white;
+}
+
+main {
+        margin: 0 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        padding-top: .5rem;
+        padding-bottom: 8rem;
+}
+
+header {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        background-color: white;
+}
+
+footer {
+        width: 100%;
+}
+
+h1 {
+        font-weight: 700;
+        font-size: 1rem;
+        margin: 0;
+}
+
+h2 {
+        font-weight: 600;
+        margin: 0;
+        font-size: 1.1rem;
+}
+
+h3 {
+        font-weight: 400;
+        margin: 0;
+        font-size: .8rem;
+        color: rgba(0, 0, 0, 0.8);
+}
+
+h4 {
+        font-weight: 400;
+        margin: .5rem 0 0 0;
+        font-size: .9rem;
+}
+
+h5 {
+        font-weight: 400;
+        margin: .2rem 0;
+        font-size: .8rem;
+        color: rgba(0, 0, 0, 0.6);
+}
+
+h6 {
+        font-weight: 700;
+        margin: 1.6rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+}
+
+.product {
+        margin-bottom: 1rem;
+        padding: .5rem;
+        display: grid;
+        grid-template-columns: 75% 25%;
+        align-items: center;
+        border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+}
+
+#cart-items {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+}
+
+#cart-items img {
+        width: 100%;
+        border-radius: .2rem;
+}
+
+.arrow {
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+}
+
+.arrow i {
+        color: white;
+}
+
+.arrow button {
+        font-size: 1.5rem;
+        padding: .8rem 1.05rem;
+        background-color: var(--color4);
+        border-radius: 50%;
+        border: none;
+}
+
+.arrow button:active {
+        background-color: var(--color5);
+}
+
+.product-quantity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.quantidade {
+        display: flex;
+        padding: .02rem .1rem .08rem;
+        width: auto;
+        font-size: .8rem;
+        border-radius: .2rem;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        border: .1px solid rgba(0, 0, 0, 0.1);
+        justify-content: space-between;
+}
+
+.quantidade i {
+        font-size: .7rem;
+        color: var(--color4);
+}
+.quantidade i:active {
+        color: var(--color5);
+}
+
+.quantidade button {
+        border: none;
+        background-color: transparent;
+}
+
+.quantidade span {
+        margin: 0 .5rem;
+}
+
+#cart-items p {
+        text-align: center;
+        padding: 2rem 0;
+        color: rgba(0, 0, 0, 0.5);
+}
+
+#cart-total {
+        position: fixed;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 63% 37%;
+        grid-row: 1fr;
+        bottom: 0;
+        background-color: #fbfbfb;
+        border-radius: 1rem 1rem 0 0;
+        width: 100%;
+        box-shadow: 0px -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#cart-total h3 {
+        font-size: 1rem;
+        padding: 1.2rem;
+}
+
+#cart-total h4 {
+        font-size: 1rem;
+        padding: 1.2rem;
+        margin: 0;
+        text-align: end;
+}
+
+#cart-total button {
+        background-color: var(--color4);
+        border: none;
+        padding: .7rem;
+        font-size: 1rem;
+        font-weight: 600;
+        width: 90vw;
+        border-radius: 2rem;
+        margin: 0 5vw 1rem 5vw;
+        color: white;
+}
+
+#cart-total button:active {
+        background-color: var(--color5);
+}
+
+::-webkit-scrollbar {
+        display: none;
+}
+
+@media screen and (min-width: 500px) {
+        body {
+                max-width: 500px;
+                margin: auto;
+        }
+
+        header {
+                width: 500px;
+        }
+
+        #cart-total {
+                width: 500px;
+                border-radius: 1rem 1rem 0 0;
+        }
+
+        #cart-total button {
+                margin: 0 9% 1rem 9%;
+                width: 28rem;
+        }
+
+}

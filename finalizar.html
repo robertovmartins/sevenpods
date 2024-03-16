@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Catálogo Digital da SevenPods para venda com direcionamento para o WhatsApp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/finalizar.css">
+  <link rel="stylesheet" href="assets/css/color.css">
+  <link rel="shortcut icon" href="./img/logo.svg">
+  <script src="https://kit.fontawesome.com/a33a8d6d19.js" crossorigin="anonymous"></script>
+  <title>Finalizar Pedido | SevenPods</title>
+  <style>
+    .endereco-campo {
+      display: none;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 120px;
+      /* Increase width to accommodate the text */
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      border: 1px solid #00000020;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: var(--color4);
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked+.slider:before {
+      -webkit-transform: translateX(84px);
+      /* Adjust value to move the slider to the right */
+      -ms-transform: translateX(84px);
+      transform: translateX(84px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+    .switch label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      /* Adjust the left position as needed */
+      font-size: 14px;
+      /* Adjust the font size as needed */
+      color: #0000006c;
+      /* Adjust the text color as needed */
+    }
+
+    .ret {
+      font-size: .8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="arrow">
+        <button onclick="goToCart()"><i class="fa-solid fa-arrow-left"></i></button>
+      </div>
+      <h6>Finalizar</h6>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="info">
+      <div class="nome">
+        <label for="nome">Nome:</label>
+        <br>
+        <input type="text" id="nome" name="nome" autocomplete="on" required>
+      </div>
+
+      <div class="contato">
+        <label for="contato">Contato:</label>
+        <br>
+        <input type="tel" class="form-control" id="phone" name="tel" maxlength="11" placeholder="(31) 9 9999-9999"
+          autocomplete="tel-national" required>
+      </div>
+    </div>
+
+    <div id="endereco" class="endereco">
+      <div class="rua">
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" name="rua" autocomplete="on" required>
+      </div>
+
+      <div class="numero">
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" name="numero" required>
+      </div>
+    </div>
+    <div id="endereco2" class="endereco2">
+      <div class="bairro">
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" autocomplete="on" required>
+      </div>
+
+      <div class="comp">
+        <label for="complemento">Complemento:</label>
+        <input type="text" id="complemento" name="complemento" autocomplete="on" placeholder="Apto 307 Bloco 1" required>
+      </div>
+    </div>
+
+
+    <div class="infos-entrega">
+      <div id="entrega" class="entrega">
+        <label class="ret">Retirada / Entrega</label><br>
+        <label class="switch">
+          <input type="checkbox" name="forma-entrega" onclick="toggleEndereco()">
+          <span class="slider round"></span>
+        </label><br>
+      </div>
+      <div id="pagamento" class="pagamento">
+        <label class="ret">Dinheiro / Pix</label><br>
+        <label class="switch">
+          <input type="checkbox" name="forma-pagamento" onclick="togglePagamento()">
+          <span class="slider round"></span>
+        </label><br>
+      </div>
+    </div>
+
+    <p id="mensagem-erro"></p>
+    <div id="comprovante"></div>
+    <div id="qrcode"></div>
+    <div id="texto"></div>
+  </main>
+
+  <footer>
+    <button onclick="criarMensagemWhatsApp()"><i class="fa-brands fa-whatsapp"></i> Pedir pelo WhatsApp</button>
+  </footer>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script src="assets/js/finalizar.js"></script>
+
+</body>
+
+</html>

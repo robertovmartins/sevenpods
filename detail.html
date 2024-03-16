@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Catálogo Digital da SevenPods para venda com direcionamento para o WhatsApp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/detail.css">
+  <link rel="stylesheet" href="assets/css/color.css">
+  <link rel="shortcut icon" href="./img/logo.svg">
+  <script src="https://kit.fontawesome.com/a33a8d6d19.js" crossorigin="anonymous"></script>
+  <title>Catálogo Digital | SevenPods</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="arrow">
+        <button onclick="goToHome()"><i class="fa-solid fa-arrow-left"></i></button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="product-image">
+      <img id="product-image" src="" alt="">
+    </div>
+
+    <div class="product">
+      <h2 id="title"></h2>
+      <h3 id="description"></h3>
+      <h4 id="puffs"></h4>
+    </div>
+  </main>
+
+  <footer>
+    <div class="select">
+
+    </div>
+    <div class="quantidade">
+      <button onclick="decrementarQuantidade()"><i class="fa-solid fa-minus"></i></button>
+      <span id="quantity">1</span>
+      <button onclick="incrementarQuantidade()"><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <div class="add">
+      <a href="cart.html"><button onclick="adicionarAoCarrinho()" id="add-to-cart">Adicionar</button></a>
+    </div>
+
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/detail.js"></script>
+  <script></script>
+
+</body>
+
+</html>
