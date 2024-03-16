@@ -100,6 +100,7 @@ function adicionarAoCarrinho() {
     sessionStorage.setItem("carrinho", JSON.stringify(produtos));
 
   }
+  window.location.href = "cart.html"
 }
 
 function exibirDetalhesDoProduto(produto) {
