@@ -215,7 +215,7 @@ footer button {
         font-size: 1rem;
         font-weight: 600;
         width: 90vw;
-        border-radius: 2rem;
+        border-radius: 0.4rem;
         margin: 1rem 5vw 1rem 5vw;
         color: white;
 }
