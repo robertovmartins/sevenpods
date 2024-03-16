@@ -59,7 +59,7 @@ function criarMensagemWhatsApp() {
 }
 
 function goToHome() {
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 }
 
 function crc16ccitt(pData) {
