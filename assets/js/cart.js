@@ -304,7 +304,7 @@ function finalizarCompra() {
 }
 
 function goToHome() {
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 }
 
 
