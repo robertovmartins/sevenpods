@@ -32,7 +32,8 @@
             </div>
             <div class="search-hor">
                 <div class="entrega">
-                    <button id="entrega-btn" class="entrega-btn"><i class="fa-sharp fa-regular fa-clock"></i> Entrega</button>
+                    <button id="entrega-btn" class="entrega-btn"><i class="fa-sharp fa-regular fa-clock"></i>
+                        Entrega</button>
                 </div>
                 <div class="search">
                     <input type="search" id="site-search" name="q" placeholder="Pesquise aqui...">
@@ -44,7 +45,10 @@
         <main role="main">
             <div id="entrega-modal" class="modal">
                 <div class="modal-content">
-                    <h2>Horário de Entrega</h2>
+                    <div class="header-hora">
+                        <h2>Horário de Entrega</h2>
+                        <p class="close">&times;</p>
+                    </div>
 
                     <div class="dias">
                         <p>seg - sex</p>
@@ -79,9 +83,14 @@
 
         var modal = document.getElementById("entrega-modal");
         var btn = document.getElementById("entrega-btn");
+        var span = document.getElementsByClassName("close")[0];
 
         btn.onclick = function () {
             modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
         }
 
         window.onclick = function (event) {
