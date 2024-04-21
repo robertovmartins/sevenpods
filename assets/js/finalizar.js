@@ -100,7 +100,7 @@ function gerarQRCode() {
 
   const comprovante = document.getElementById("comprovante");
   document.createElement("p");
-  comprovante.textContent = "Lembre-se que para confirmar o pedido e necessário enviar o comprovante do pix e clicar no botão de 'Confirmar pedido'.";
+  comprovante.textContent = "Lembre-se que para confirmar o pedido é necessário enviar o comprovante do pix e clicar no botão de 'Pedir pelo WhatsApp'.";
 
   const qrcodeContainer = document.getElementById('qrcode');
   qrcodeContainer.innerHTML = '';
