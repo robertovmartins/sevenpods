@@ -23,7 +23,7 @@ header {
         margin-top: -3.2rem;
 }
 
-.marca{
+.marca {
         position: relative;
         top: -2.5rem;
 }
@@ -48,11 +48,26 @@ p {
 
 .modal h2 {
         font-size: 1rem;
-        margin: 0 0 5px 0;
+        margin: 0;
 }
 
-.entrega-btn{
-        margin-bottom: .8rem;        
+.header-hora{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 .5rem 0;
+        height: 1.5rem;
+}
+
+.close {
+        color: var(--color3);
+        font-size: 28px;
+        font-weight: bold;
+}
+
+
+.entrega-btn {
+        margin-bottom: .8rem;
         color: var(--color3);
         font-weight: bold;
         border-radius: 5px;
